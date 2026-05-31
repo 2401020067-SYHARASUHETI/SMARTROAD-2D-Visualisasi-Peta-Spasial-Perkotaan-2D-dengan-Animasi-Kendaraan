@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SmartRoad 2D — Visualisasi Peta Spasial Perkotaan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="header">
+    <div class="logo">
+      <div class="logo-icon">◎</div>
+      <div>
+        <h1>SmartRoad 2D</h1>
+        <div class="sub">Visualisasi Peta Spasial Perkotaan · Grafika Komputer INF11114 · UMRAH</div>
+      </div>
+    </div>
+    <div class="team">
+      2401020067 — Syhara Suheti<br>
+      2401020063 — Nurpaisyah<br>
+      2401020074 — Septia Dwi Ananta
+    </div>
+  </div>
+
+  <div id="controls">
+    <div class="ctrl-group">
+      <span class="clabel">Simulasi</span>
+      <button class="pri" id="btn-start">▶ Start</button>
+      <button id="btn-pause">⏸ Pause</button>
+    </div>
+    <div class="divider"></div>
+    <div class="ctrl-group">
+      <span class="clabel">Algoritma</span>
+      <select id="algo-select">
+        <option value="bfs">BFS — Jalur Terpendek</option>
+        <option value="dfs">DFS — Jalur Alternatif</option>
+      </select>
+    </div>
+    <div class="divider"></div>
+    <div class="ctrl-group">
+      <span class="clabel">Peta</span>
+      <button id="btn-randmap">⟳ Acak Map</button>
+      <button id="btn-randpos">◉ Acak Posisi</button>
+    </div>
+    <div class="divider"></div>
+    <div class="ctrl-group">
+      <span class="clabel">Zoom</span>
+      <button id="btn-zm">＋</button>
+      <button id="btn-zo">−</button>
+      <button id="btn-reset">⌖ Reset</button>
+    </div>
+    <div class="divider"></div>
+    <div class="ctrl-group">
+      <span class="clabel">Navigasi</span>
+      <button id="btn-up">↑</button>
+      <button id="btn-left">←</button>
+      <button id="btn-down">↓</button>
+      <button id="btn-right">→</button>
+    </div>
+  </div>
+
+  <div id="infobar">
+    <div class="ipill"><span class="lbl">Algoritma</span><span class="val accent" id="lbl-algo">BFS</span></div>
+    <div class="ipill"><span class="lbl">Status</span><span class="val" id="lbl-status">Siap</span></div>
+    <div class="ipill"><span class="lbl">Node</span><span class="val" id="lbl-nodes">0</span></div>
+    <div class="ipill"><span class="lbl">Edge</span><span class="val" id="lbl-edges">0</span></div>
+    <div class="ipill"><span class="lbl">Gedung</span><span class="val green" id="lbl-bldg">0</span></div>
+    <div class="ipill"><span class="lbl">Panjang Jalur</span><span class="val green" id="lbl-path">—</span></div>
+    <div class="ipill"><span class="lbl">Zoom</span><span class="val" id="lbl-zoom">100%</span></div>
+  </div>
+
+  <div id="canvaswrap">
+    <canvas id="mc"></canvas>
+    <div id="toast"></div>
+  </div>
+
+  <div id="legend">
+    <div class="li"><div class="ld" style="background:#3a4250"></div>Jalan</div>
+    <div class="li"><div class="ld circle" style="background:#f5b042"></div>Bundaran</div>
+    <div class="li"><div class="ld" style="background:#6fa8dc"></div>Kantor</div>
+    <div class="li"><div class="ld" style="background:#e07b6e"></div>Toko</div>
+    <div class="li"><div class="ld" style="background:#9bbf7a"></div>Apartemen</div>
+    <div class="li"><div class="ld" style="background:#e0b97a"></div>Rumah</div>
+    <div class="li"><div class="ld" style="background:#a8a8a8"></div>Gudang</div>
+    <div class="li"><div class="ld circle" style="background:#3e7c4f"></div>Pohon</div>
+    <div class="li"><div class="ld circle" style="background:#e63946"></div>Start (S)</div>
+    <div class="li"><div class="ld circle" style="background:#2dc653"></div>Tujuan (T)</div>
+    <div class="li"><div class="ld circle" style="background:#f5b042"></div>Kendaraan</div>
+    <div class="li"><div class="ld" style="background:rgba(245,176,66,0.6)"></div>Rute Aktif</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
