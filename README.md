@@ -16,16 +16,6 @@ Fakultas Teknik dan Teknologi Kemaritiman
 
 ---
 
-## 👥 Anggota Tim
-
-| Nama | NIM | Tugas |
-|---|---|---|
-| Syhara Suheti | 2401020067 | Implementasi algoritma BFS/DFS & logika pencarian rute |
-| Nurpaisyah | 2401020063 | Integrasi sistem, rendering kota, & render loop |
-| Septia Dwi Ananta | 2401020074 | Animasi pergerakan kendaraan & waypoint system |
-
----
-
 ## 📋 Deskripsi Projek
 
 **SmartRoad 2D** adalah aplikasi visualisasi peta spasial perkotaan berbasis web yang dibangun menggunakan **HTML5 Canvas API**. Sistem ini menampilkan kota virtual 2D dengan jaringan jalan acak (*procedurally generated*), gedung-gedung, pohon tepi jalan, bundaran, dan animasi kendaraan yang bergerak menyusuri rute hasil kalkulasi algoritma pencarian.
